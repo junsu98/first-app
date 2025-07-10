@@ -54,7 +54,7 @@ if submitted:
     else:
         df = pd.read_csv(DATA_PATH)
         df = pd.concat([df, pd.DataFrame([new_row])], ignore_index = True)
-        df.to_csv(DATA_PATH, index = False, encoding = "utf-8-sig")
+        df.to_csv(DATA_PATH, index = False, encoding = "utf-8")
     st.success("설문이 제출되었습니다! 감사합니다😊")
 
 #4. 요약 리포트 보기
