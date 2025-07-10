@@ -50,7 +50,7 @@ if submitted:
     #CSV 파일이 없으면 헤더 포함 생성, 있으면 append
     if not os.path.isfile(DATA_PATH):
         df = pd.DataFrame([new_row])
-        df.to_csv(DATA_PATH, index=False, encoding = "utf-8-sig")
+        df.to_csv(DATA_PATH, index=False, encoding = "utf-8")
     else:
         df = pd.read_csv(DATA_PATH)
         df = pd.concat([df, pd.DataFrame([new_row])], ignore_index = True)
